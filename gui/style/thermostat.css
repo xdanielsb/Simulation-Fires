@@ -1,0 +1,19 @@
+.thermostat{
+  height: 110px;
+  background-color: white;
+  width: 200px;
+}
+
+.up-thermo{
+  height: 30px;
+  background-color: blue;
+}
+
+.med-thermo{
+  height: 50px;
+}
+
+.down-thermo{
+  height: 30px;
+  background-color: red;
+}

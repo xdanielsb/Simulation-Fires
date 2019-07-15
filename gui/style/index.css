@@ -1,0 +1,13 @@
+#avatar{
+  margin-top: 1.5em;
+}
+.content-menu{
+  margin-left: 1em;
+}
+.ui.toggle.checkbox{
+  margin-top: 1em;
+}
+.content-body{
+  background-image: url("../img/floor.jpg") !important;
+ /*  background-size: cover !important;*/
+}
