@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <link rel="stylesheet" type="text/css" href="style/index.css">
     <link rel="stylesheet" type="text/css" href="style/thermostat.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
@@ -44,17 +45,22 @@
         </a>
       </div>
       <div class="pusher content-body">
-        <div class="thermostat">
-          <div class="up-thermo">
-            wifi
+        <div class="content">
+          <div class="thermostat">
+            <div class="up-thermo">
+              <i class="fa fa-wifi wifi" aria-hidden="true"></i>
+            </div>
+            <div class="med-thermo">
+                <h1 class="ui  center aligned black header"> 17&deg;C </h1>
+            </div>
+            <div class="down-thermo">
+              <div class="dots">
+                <i class="fa fa-circle" aria-hidden="true"></i>
+                <i class="fa fa-circle" aria-hidden="true"></i>
+                <i class="fa fa-circle" aria-hidden="true"></i>
+              </div>
+            </div>
           </div>
-          <div class="med-thermo">
-              <h3 class="temp"> 17&deg;C </h3>
-          </div>
-          <div class="down-thermo">
-            3 dots
-          </div>
-
         </div>
     </div>
     <script src="script/index.js"></script>

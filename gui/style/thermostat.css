@@ -1,12 +1,14 @@
+.content{
+  margin:1em;
+}
 .thermostat{
   height: 110px;
   background-color: white;
-  width: 200px;
+  width: 150px;
 }
-
 .up-thermo{
   height: 30px;
-  background-color: blue;
+  background-color: white;
 }
 
 .med-thermo{
@@ -15,5 +17,14 @@
 
 .down-thermo{
   height: 30px;
-  background-color: red;
+  background-color: white;
+}
+.dots{
+  text-align: center;
+  letter-spacing: 0.5em;
+}
+.wifi{
+  margin-top:0.5em;
+  margin-right: 0.5em;
+  float: right;
 }
