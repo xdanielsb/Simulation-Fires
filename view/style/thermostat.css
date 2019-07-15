@@ -2,21 +2,21 @@
   margin:1em;
 }
 .thermostat{
-  height: 110px;
+  height: 90px;
   background-color: white;
-  width: 150px;
+  width: 120px;
+  padding-top: 1em;
+  border-radius: 20%;
 }
 .up-thermo{
-  height: 30px;
   background-color: white;
 }
 
 .med-thermo{
-  height: 50px;
+
 }
 
 .down-thermo{
-  height: 30px;
   background-color: white;
 }
 .dots{
@@ -25,6 +25,6 @@
 }
 .wifi{
   margin-top:0.5em;
-  margin-right: 0.5em;
+  margin-right: 1em;
   float: right;
 }
