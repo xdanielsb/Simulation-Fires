@@ -5,6 +5,7 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <link rel="stylesheet" type="text/css" href="style/index.css">
+    <link rel="stylesheet" type="text/css" href="style/balloon.css">
     <link rel="stylesheet" type="text/css" href="style/thermostat.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -44,7 +45,7 @@
           </div>
         </div>
         <div class="links">
-          <a class="item">
+          <a class="item" >
           Acerca del proyecto
           </a>
           <a class="item">
@@ -54,7 +55,7 @@
       </div>
       <div class="pusher content-body">
         <div class="content">
-          <div class="thermostat">
+          <div class="thermostat" db="Sensor" dbp="right">
             <div class="up-thermo">
               <i class="fa fa-wifi wifi" aria-hidden="true"></i>
             </div>
@@ -69,22 +70,22 @@
               </div>
             </div>
           </div>
-          <div class="electric-outlet">
-            <img src="img/toma.png" class="outlet"/>
+          <div class="container-outlet" db="Toma Electrica" dbp="right" >
+            <img src="img/toma.png"  id="img-toma" class="outlet"  />
           </div>
-          <div class="cigar">
-            <img src="img/cigar.png" class="cigar"/>
+          <div class="container-cigar" db="Cigarrillo" dbp="up">
+            <img src="img/cigar.png" id="img-cigar" class="cigar"/>
           </div>
-          <div class="painting">
+          <div class="container-painting" db="Pintura" dbp="left">
             <img src="img/photo_frame.png" class="painting"/>
           </div>
-          <div class="table">
+          <div class="container-table" db="Mesa de madera" dbp="up">
             <img src="img/table_night.png" class="table"/>
           </div>
-          <div class="vela">
-            <img src="img/vela.png" class="vela"/>
+          <div class="container-vela" db="Vela" dbp="left">
+            <img src="img/vela.png" id="img-vela" class="vela"/>
           </div>
-          <div class="coach">
+          <div class="container-coach" db="Sofa" dbp="up">
             <img src="img/sofa.png" class="coach"/>
           </div>
         </div>
