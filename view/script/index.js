@@ -5,6 +5,7 @@ const oneSecond = 1000;
 $(document).ready(function () {
   //$('.ui.sidebar').sidebar('toggle');
   $('#fire').hide();
+  $('.fog__container').hide();
   $('#chkCigar').change(function () {
     if($('#chkCigar').is(':checked')){
       $('.container-cigar').show();
@@ -33,17 +34,16 @@ $(document).ready(function () {
     $(".smokeElement").addClass("smoke");
     $("#isOk").addClass("animate");
     setTimeout( function(){
+      $(".content-body").addClass("fog");
+      $('.fog__container').show();
       $("#isOk").removeClass("animate");
-      $("#isSmoke").addClass("animate");
-    }  , oneSecond * 5 );
+    }  , oneSecond * 10 );
     setTimeout( function(){
       $("#isSmoke").removeClass("animate");
       $("#isFire").addClass("animate");
       $('#fire').show();
-
       startFire();
-    }  , oneSecond * 10 );
-
+    }  , oneSecond * 20 );
   })
 
 });

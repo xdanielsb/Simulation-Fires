@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="style/thermostat.css">
     <link rel="stylesheet" type="text/css" href="style/smoke.css">
     <link rel="stylesheet" type="text/css" href="style/flame.css">
+    <link rel="stylesheet" type="text/css" href="style/fog.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
@@ -57,7 +58,12 @@
           </a>
         </div>
       </div>
-      <div class="pusher content-body">
+      <div class="pusher content-body ">
+        <figure class="absolute-bg" ></figure>
+        <div class="fog__container">
+          <div class="fog__img fog__img--first"></div>
+          <div class="fog__img fog__img--second"></div>
+        </div>
         <div class="content-sim">
           <div class="thermostat" db="Sensor" dbp="right">
             <div class="up-thermo">
@@ -72,6 +78,11 @@
                 <i id="isSmoke" class="fa fa-circle dotFlag" aria-hidden="true"></i>
                 <i id="isFire" class="fa fa-circle dotFlag" aria-hidden="true"></i>
               </div>
+            </div>
+          </div>
+          <div class="containerFire">
+            <div id="fire" class="fireUtil">
+              <div id="f0" class="flame fireUtil"></div>
             </div>
           </div>
           <div class="container-outlet" db="Toma Electrica" dbp="right" >
@@ -125,9 +136,7 @@
 
             </div>
           </div>
-          <div id="fire" class="fireUtil">
-            <div id="f0" class="flame fireUtil"></div>
-          </div>
+
           <div class="container-painting" db="Pintura" dbp="left">
             <img src="img/photo_frame.png" class="painting"/>
           </div>
