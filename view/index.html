@@ -7,8 +7,11 @@
     <link rel="stylesheet" type="text/css" href="style/index.css">
     <link rel="stylesheet" type="text/css" href="style/balloon.css">
     <link rel="stylesheet" type="text/css" href="style/thermostat.css">
+    <link rel="stylesheet" type="text/css" href="style/smoke.css">
+    <link rel="stylesheet" type="text/css" href="style/flame.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
   </head>
@@ -18,13 +21,14 @@
         <img class="ui centered small image" src="img/avatar.png" id="avatar"/>
         <h4 class="ui  center aligned grey header" > Daniel Santos </h4>
         <div class="content-menu">
-          <h4> Parametros </h4>
+          <!-- <h4> Parametros </h4>
           <div>
             <div>
               <h5> Velocidad de propagación </h5>
               <input  type="range" name="points" min="0" max="10"/>
             </div>
           </div>
+          -->
           <h5> Causas de incendio </h5>
           <div>
             <div class="ui toggle checkbox">
@@ -41,7 +45,7 @@
             </div>
           </div>
           <div class="btnInit">
-            <button class="ui blue button ">Iniciar Simulación</button>
+            <button class="ui blue button" id="iniciarSimulacion">Iniciar Simulación</button>
           </div>
         </div>
         <div class="links">
@@ -64,17 +68,65 @@
             </div>
             <div class="down-thermo">
               <div class="dots">
-                <i class="fa fa-circle" aria-hidden="true"></i>
-                <i class="fa fa-circle" aria-hidden="true"></i>
-                <i class="fa fa-circle" aria-hidden="true"></i>
+                <i id="isOk" class="fa fa-circle dotFlag " aria-hidden="true"></i>
+                <i id="isSmoke" class="fa fa-circle dotFlag" aria-hidden="true"></i>
+                <i id="isFire" class="fa fa-circle dotFlag" aria-hidden="true"></i>
               </div>
             </div>
           </div>
           <div class="container-outlet" db="Toma Electrica" dbp="right" >
             <img src="img/toma.png"  id="img-toma" class="outlet"  />
+            <div class="smokeElement">
+              <span class="s0"></span>
+              <span class="s1"></span>
+              <span class="s2"></span>
+              <span class="s3"></span>
+              <span class="s4"></span>
+              <span class="s5"></span>
+              <span class="s6"></span>
+              <span class="s7"></span>
+              <span class="s8"></span>
+              <span class="s9"></span>
+              <span class="s10"></span>
+              <span class="s11"></span>
+              <span class="s12"></span>
+              <span class="s13"></span>
+              <span class="s14"></span>
+              <span class="s15"></span>
+              <span class="s16"></span>
+              <span class="s17"></span>
+              <span class="s18"></span>
+              <span class="s19"></span>
+            </div>
           </div>
           <div class="container-cigar" db="Cigarrillo" dbp="up">
             <img src="img/cigar.png" id="img-cigar" class="cigar"/>
+            <div class="smokeElement"  style="bottom: 12px !important;left: 10% !important;" >
+              <span class="s0"></span>
+              <span class="s1"></span>
+              <span class="s2"></span>
+              <span class="s3"></span>
+              <span class="s4"></span>
+              <span class="s5"></span>
+              <span class="s6"></span>
+              <span class="s7"></span>
+              <span class="s8"></span>
+              <span class="s9"></span>
+              <span class="s10"></span>
+              <span class="s11"></span>
+              <span class="s12"></span>
+              <span class="s13"></span>
+              <span class="s14"></span>
+              <span class="s15"></span>
+              <span class="s16"></span>
+              <span class="s17"></span>
+              <span class="s18"></span>
+              <span class="s19"></span>
+
+            </div>
+          </div>
+          <div id="fire" class="fireUtil">
+            <div id="f0" class="flame fireUtil"></div>
           </div>
           <div class="container-painting" db="Pintura" dbp="left">
             <img src="img/photo_frame.png" class="painting"/>
@@ -83,6 +135,28 @@
             <img src="img/table_night.png" class="table"/>
           </div>
           <div class="container-vela" db="Vela" dbp="left">
+            <div class="smokeElement">
+              <span class="s0"></span>
+              <span class="s1"></span>
+              <span class="s2"></span>
+              <span class="s3"></span>
+              <span class="s4"></span>
+              <span class="s5"></span>
+              <span class="s6"></span>
+              <span class="s7"></span>
+              <span class="s8"></span>
+              <span class="s9"></span>
+              <span class="s10"></span>
+              <span class="s11"></span>
+              <span class="s12"></span>
+              <span class="s13"></span>
+              <span class="s14"></span>
+              <span class="s15"></span>
+              <span class="s16"></span>
+              <span class="s17"></span>
+              <span class="s18"></span>
+              <span class="s19"></span>
+            </div>
             <img src="img/vela.png" id="img-vela" class="vela"/>
           </div>
           <div class="container-coach" db="Sofa" dbp="up">
@@ -109,7 +183,7 @@
   </div>
 </div>
 </div>
-
+<script src="script/fire.js"></script>
     <script src="script/index.js"></script>
   </body>
 </html>

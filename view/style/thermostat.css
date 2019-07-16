@@ -29,6 +29,7 @@
   margin-top:0.5em;
   margin-right: 1em;
   float: right;
+  color: cornflowerblue;
 }
 .links{
   position: absolute;
@@ -89,7 +90,7 @@
 }
 .container-cigar{
   margin-top: 30em;
-  margin-left: 11em;
+  margin-left: 21em;
 }
 .container-table{
   margin-top: 20em;

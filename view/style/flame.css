@@ -1,0 +1,22 @@
+
+.fireUtil {
+  position: absolute;
+}
+
+#fire {
+	width:100%;
+	height:100%;
+  background-size: 100%;
+	top: 0px;
+	left: 0px;
+	margin: auto;
+  overflow:hidden;
+}
+
+.flame {
+  width:57px;
+  height:80px;
+  overflow:hidden;
+  background: url("http://creativeocean.com/dev/_images/flame3.png") no-repeat;
+  background-size: 100% 100%;
+}

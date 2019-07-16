@@ -11,3 +11,26 @@
   background-image: url("../img/floor.jpg") !important;
  /*  background-size: cover !important;*/
 }
+
+#isOk{
+  color: green;
+  opacity: 1;
+}
+#isSmoke{
+  color: #FFD700;
+  opacity: 0.2;
+}
+#isFire{
+  color: red;
+  opacity: 0.2;
+}
+
+.animate{
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink{
+  0%{opacity: 0;}
+  50%{opacity: .5;}
+  100%{opacity: 1;}
+}

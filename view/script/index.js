@@ -1,29 +1,49 @@
 'use strict'
 
+const oneSecond = 1000;
+
 $(document).ready(function () {
   //$('.ui.sidebar').sidebar('toggle');
+  $('#fire').hide();
   $('#chkCigar').change(function () {
     if($('#chkCigar').is(':checked')){
-      $('#img-cigar').show();
+      $('.container-cigar').show();
     }else{
-      $('#img-cigar').hide();
+      $('.container-cigar').hide();
     }
   });
   $('#chkOutlet').change(function () {
     if($('#chkOutlet').is(':checked')){
-      $('#img-toma').show();
+      $('.container-outlet').show();
     }else{
-      $('#img-toma').hide();
+      $('.container-outlet').hide();
     }
   });
   $('#chkVela').change(function () {
     if($('#chkVela').is(':checked')){
-      $('#img-vela').show();
+      $('.container-vela').show();
     }else{
-      $('#img-vela').hide();
+      $('.container-vela').hide();
     }
   });
   $('.thermostat').click(function(){
     $('.ui.modal').modal('show');
   })
+  $('#iniciarSimulacion').click(function(){
+    $(".smokeElement").addClass("smoke");
+    $("#isOk").addClass("animate");
+    setTimeout( function(){
+      $("#isOk").removeClass("animate");
+      $("#isSmoke").addClass("animate");
+    }  , oneSecond * 5 );
+    setTimeout( function(){
+      $("#isSmoke").removeClass("animate");
+      $("#isFire").addClass("animate");
+      $('#fire').show();
+
+      startFire();
+    }  , oneSecond * 10 );
+
+  })
+
 });
