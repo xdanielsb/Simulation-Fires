@@ -23,4 +23,7 @@ $(document).ready(function () {
       $('#img-vela').hide();
     }
   });
+  $('.thermostat').click(function(){
+    $('.ui.modal').modal('show');
+  })
 });
