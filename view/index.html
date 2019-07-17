@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="style/flame.css">
     <link rel="stylesheet" type="text/css" href="style/fog.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <script src="script/apexcharts.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script
@@ -203,26 +204,32 @@
         </div>
       </div>
     </div>
-    <div class="ui basic modal" id="modalCharts">
+    <div class="ui basic modal " id="modalCharts">
       <div class="ui icon header">
-        <i class="archive icon"></i>
-        Archive Old Messages
+        <!-- <i class="archive icon"></i> -->
+        Estadísticas de la Simulación
       </div>
       <div class="content">
-        <p>Your inbox is getting full, would you like us to enable automatic archiving of old messages?</p>
+        <div class="charts">
+          <div class="temperatura">
+            <div id="chart"></div>
+          </div>
+          <div class="humo"></div>
+        </div>
+        <div class="info">
+          <div class="stats"></div>
+          <div class="state"></div>
+        </div>
       </div>
       <div class="actions">
-        <div class="ui red basic cancel inverted button">
-          <i class="remove icon"></i>
-          No
-        </div>
         <div class="ui green ok inverted button">
-          <i class="checkmark icon"></i>
-          Yes
+          <i class="remove icon"></i>
+
         </div>
       </div>
     </div>
     <script src="script/fire.js"></script>
     <script src="script/index.js"></script>
+  <script src="script/chartTemp.js"></script>  
   </body>
 </html>

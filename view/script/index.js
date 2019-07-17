@@ -7,7 +7,7 @@ $(document).ready(function () {
   $('#fire').hide();
   $('.fog__container').hide();
   $('#detenerSimulacion').hide();
-  $('#iniciarGraficasSimulacion').hide();
+//  $('#iniciarGraficasSimulacion').hide();
 
   $('#chkCigar').change(function () {
     if($('#chkCigar').is(':checked')){
