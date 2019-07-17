@@ -3,6 +3,7 @@
 }
 .content-menu{
   margin-left: 1em;
+  margin-top: 4em;
 }
 .ui.toggle.checkbox{
   margin-top: 1em;
@@ -25,6 +26,37 @@
   opacity: 0.2;
 }
 
+.btnInit{
+  margin-top: 1em;
+  color: green;
+  font-size: 3.5em;
+  text-align: center;
+}
+.btnStop{
+  margin-top: 1em;
+  color: red;
+  font-size: 3.5em;
+  text-align: center;
+}
+.btnCharts{
+  margin-top: 1em;
+  color: blue;
+  font-size: 3.5em;
+  text-align: center;
+}
+#iniciarSimulacion{
+  margin: 0px auto;
+  cursor: pointer;
+}
+#detenerSimulacion{
+  margin: 0px auto;
+  cursor: pointer;
+}
+
+#iniciarGraficasSimulacion{
+  margin: 0px auto;
+  cursor: pointer;
+}
 .animate{
   animation: blink 1s linear infinite;
 }

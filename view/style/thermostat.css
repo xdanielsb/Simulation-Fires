@@ -37,10 +37,6 @@
   bottom: 0;
   left:0;
 }
-.btnInit{
-  margin-top:2em;
-  margin-left: 1em;
-}
 
 .container-raspberry .coach, .outlet, .painting, .cigar, .table, .vela{
   /* position: absolute; */
