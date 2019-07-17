@@ -42,7 +42,7 @@
   margin-left: 1em;
 }
 
-.coach, .outlet, .painting, .cigar, .table, .vela{
+.container-raspberry .coach, .outlet, .painting, .cigar, .table, .vela{
   /* position: absolute; */
   /* display: block; */
 }
