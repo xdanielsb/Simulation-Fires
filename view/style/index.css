@@ -80,6 +80,9 @@
 #raspberry{
   margin: 1em;
 }
+.state{
+  text-align: center;
+}
 
 .description{
   margin-top:2em;
