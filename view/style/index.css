@@ -80,3 +80,8 @@
 .description{
   margin-top:2em;
 }
+
+.chartTemperatura, .chartHumo{
+  width: 50% !important;
+  float: left;
+}
