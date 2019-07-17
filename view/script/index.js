@@ -37,6 +37,7 @@ $(document).ready(function () {
       $(".content-body").addClass("fog");
       $('.fog__container').show();
       $("#isOk").removeClass("animate");
+      $("#isSmoke").addClass("animate");
     }  , oneSecond * 10 );
     setTimeout( function(){
       $("#isSmoke").removeClass("animate");

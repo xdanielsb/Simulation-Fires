@@ -62,6 +62,9 @@
   width: 8em;
   height: 10em;
 }
+.container-cigar{
+  z-index: 4;
+}
 .cigar{
   width: 3em;
   height:1em;
