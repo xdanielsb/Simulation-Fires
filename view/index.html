@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="style/smoke.css">
     <link rel="stylesheet" type="text/css" href="style/flame.css">
     <link rel="stylesheet" type="text/css" href="style/fog.css">
+    <link rel="stylesheet" type="text/css" href="style/termometer.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     <script src="script/apexcharts.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -219,8 +220,20 @@
           </div>
         </div>
         <div class="info">
-          <div class="stats"></div>
-          <div class="state"></div>
+          <div class="stats">
+            <div id="wrapper">
+            	<div id="termometer">
+            		<div id="temperature" style="height:10px" data-value="5°C"></div>
+            		<div id="graduations"></div>
+            	</div>
+            </div>
+
+          </div>
+          <div class="state">
+
+
+
+          </div>
         </div>
       </div>
       <div class="actions">
