@@ -18,11 +18,11 @@
   </head>
   <body>
     <div class="ui bottom attached segment pushable">
-      <div class="ui visible  left vertical sidebar menu">
-        <img class="ui centered small image" src="img/avatar.png" id="avatar"/>
-        <h4 class="ui  center aligned grey header" > Daniel Santos </h4>
-        <div class="content-menu">
-          <!-- <h4> Parametros </h4>
+    <div class="ui visible  left vertical sidebar menu">
+      <img class="ui centered small image" src="img/avatar.png" id="avatar"/>
+      <h4 class="ui  center aligned grey header" > Daniel Santos </h4>
+      <div class="content-menu">
+        <!-- <h4> Parametros </h4>
           <div>
             <div>
               <h5> Velocidad de propagación </h5>
@@ -30,183 +30,199 @@
             </div>
           </div>
           -->
-          <h5 > Causas de incendio </h5>
-          <div>
-            <div class="ui toggle checkbox">
-              <input type="checkbox" name="public" id="chkCigar" checked >
-              <label>Cigarrillo</label>
-            </div>
-            <div class="ui toggle checkbox">
-              <input type="checkbox" name="public" id="chkOutlet" checked>
-              <label>Toma Electrica</label>
-            </div>
-            <div class="ui toggle checkbox">
-              <input type="checkbox" name="public" id="chkVela" checked>
-              <label>Vela</label>
-            </div>
+        <h5 > Causas de incendio </h5>
+        <div>
+          <div class="ui toggle checkbox">
+            <input type="checkbox" name="public" id="chkCigar" checked >
+            <label>Cigarrillo</label>
           </div>
-          <div class="btnInit">
-            <div db="Iniciar Simulación" dbp="up">
-              <i class="fas fa-play"  id="iniciarSimulacion" ></i>
-            </div>
+          <div class="ui toggle checkbox">
+            <input type="checkbox" name="public" id="chkOutlet" checked>
+            <label>Toma Electrica</label>
           </div>
-          <div class="btnStop">
-            <div db="Detener Simulación" dbp="up">
-              <i class="fas fa-stop"  id="detenerSimulacion" ></i>
-            </div>
-          </div>
-          <div class="btnCharts">
-            <div db="Estadísticas Simulación" dbp="up">
-              <i class="fas fa-chart-pie"  id="iniciarGraficasSimulacion" ></i>
-            </div>
+          <div class="ui toggle checkbox">
+            <input type="checkbox" name="public" id="chkVela" checked>
+            <label>Vela</label>
           </div>
         </div>
-        <div class="links">
-          <a class="item" >
-          Acerca del proyecto
-          </a>
-          <a class="item">
-          Obtener más información
-          </a>
+        <div class="btnInit">
+          <div db="Iniciar Simulación" dbp="up">
+            <i class="fas fa-play"  id="iniciarSimulacion" ></i>
+          </div>
+        </div>
+        <div class="btnStop">
+          <div db="Detener Simulación" dbp="up">
+            <i class="fas fa-stop"  id="detenerSimulacion" ></i>
+          </div>
+        </div>
+        <div class="btnCharts">
+          <div db="Estadísticas Simulación" dbp="up">
+            <i class="fas fa-chart-pie"  id="iniciarGraficasSimulacion" ></i>
+          </div>
         </div>
       </div>
-      <div class="pusher content-body ">
-        <figure class="absolute-bg" ></figure>
-        <div class="fog__container">
-          <div class="fog__img fog__img--first"></div>
-          <div class="fog__img fog__img--second"></div>
-        </div>
-        <div class="content-sim">
-          <div class="thermostat" db="Sensor" dbp="right">
-            <div class="up-thermo">
-              <i class="fa fa-wifi wifi" aria-hidden="true"></i>
-            </div>
-            <div class="med-thermo">
-                <h1 class="ui  center aligned black header"> 17&deg;C </h1>
-            </div>
-            <div class="down-thermo">
-              <div class="dots">
-                <i id="isOk" class="fa fa-circle dotFlag " aria-hidden="true"></i>
-                <i id="isSmoke" class="fa fa-circle dotFlag" aria-hidden="true"></i>
-                <i id="isFire" class="fa fa-circle dotFlag" aria-hidden="true"></i>
-              </div>
-            </div>
-          </div>
-          <div class="containerFire">
-            <div id="fire" class="fireUtil">
-              <div id="f0" class="flame fireUtil"></div>
-            </div>
-          </div>
-          <div class="container-outlet" db="Toma Electrica" dbp="right" >
-            <img src="img/toma.png"  id="img-toma" class="outlet"  />
-            <div class="smokeElement">
-              <span class="s0"></span>
-              <span class="s1"></span>
-              <span class="s2"></span>
-              <span class="s3"></span>
-              <span class="s4"></span>
-              <span class="s5"></span>
-              <span class="s6"></span>
-              <span class="s7"></span>
-              <span class="s8"></span>
-              <span class="s9"></span>
-              <span class="s10"></span>
-              <span class="s11"></span>
-              <span class="s12"></span>
-              <span class="s13"></span>
-              <span class="s14"></span>
-              <span class="s15"></span>
-              <span class="s16"></span>
-              <span class="s17"></span>
-              <span class="s18"></span>
-              <span class="s19"></span>
-            </div>
-          </div>
-          <div class="container-cigar" db="Cigarrillo" dbp="up">
-            <img src="img/cigar.png" id="img-cigar" class="cigar"/>
-            <div class="smokeElement"  style="bottom: 12px !important;left: 10% !important;" >
-              <span class="s0"></span>
-              <span class="s1"></span>
-              <span class="s2"></span>
-              <span class="s3"></span>
-              <span class="s4"></span>
-              <span class="s5"></span>
-              <span class="s6"></span>
-              <span class="s7"></span>
-              <span class="s8"></span>
-              <span class="s9"></span>
-              <span class="s10"></span>
-              <span class="s11"></span>
-              <span class="s12"></span>
-              <span class="s13"></span>
-              <span class="s14"></span>
-              <span class="s15"></span>
-              <span class="s16"></span>
-              <span class="s17"></span>
-              <span class="s18"></span>
-              <span class="s19"></span>
-
-            </div>
-          </div>
-
-          <div class="container-painting" db="Pintura" dbp="left">
-            <img src="img/photo_frame.png" class="painting"/>
-          </div>
-          <div class="container-table" db="Mesa de madera" dbp="up">
-            <img src="img/table_night.png" class="table"/>
-          </div>
-          <div class="container-vela" db="Vela" dbp="left">
-            <div class="smokeElement">
-              <span class="s0"></span>
-              <span class="s1"></span>
-              <span class="s2"></span>
-              <span class="s3"></span>
-              <span class="s4"></span>
-              <span class="s5"></span>
-              <span class="s6"></span>
-              <span class="s7"></span>
-              <span class="s8"></span>
-              <span class="s9"></span>
-              <span class="s10"></span>
-              <span class="s11"></span>
-              <span class="s12"></span>
-              <span class="s13"></span>
-              <span class="s14"></span>
-              <span class="s15"></span>
-              <span class="s16"></span>
-              <span class="s17"></span>
-              <span class="s18"></span>
-              <span class="s19"></span>
-            </div>
-            <img src="img/vela.png" id="img-vela" class="vela"/>
-          </div>
-          <div class="container-coach" db="Sofa" dbp="up">
-            <img src="img/sofa.png" class="coach"/>
-          </div>
-        </div>
+      <div class="links">
+        <a class="item" >
+        Acerca del proyecto
+        </a>
+        <a class="item">
+        Obtener más información
+        </a>
+      </div>
     </div>
-
-<!-- Modals -->
-<div class="ui modal">
-<i class="close icon"></i>
-<div class="header">
-  Raspberry Pi
-</div>
-<div class="image content">
-  <div class="ui large image" class="container-raspberry">
-    <img src="img/raspberry2.png" usemap="#planetmap" id="raspberry">
-  </div>
-  <div class="description ">
-    <div class="ui header">Descripción</div>
-    <p> Raspberry Pi es un ordenador de placa reducida, ordenador </p>
-    <p> de placa única u ordenador de placa simple (SBC) de bajo coste </p>
-    <p> desarrollado en el Reino Unido por la Raspberry Pi Foundation </p>
-    <br>
-    <p> <b> Imágen tomada de : </b> (Raspberry Pi Foundation, 2018b) </p>
-  </div>
-</div>
-</div>
-<script src="script/fire.js"></script>
+    <div class="pusher content-body ">
+      <figure class="absolute-bg" ></figure>
+      <div class="fog__container">
+        <div class="fog__img fog__img--first"></div>
+        <div class="fog__img fog__img--second"></div>
+      </div>
+      <div class="content-sim">
+        <div class="thermostat" db="Sensor" dbp="right">
+          <div class="up-thermo">
+            <i class="fa fa-wifi wifi" aria-hidden="true"></i>
+          </div>
+          <div class="med-thermo">
+            <h1 class="ui  center aligned black header"> 17&deg;C </h1>
+          </div>
+          <div class="down-thermo">
+            <div class="dots">
+              <i id="isOk" class="fa fa-circle dotFlag " aria-hidden="true"></i>
+              <i id="isSmoke" class="fa fa-circle dotFlag" aria-hidden="true"></i>
+              <i id="isFire" class="fa fa-circle dotFlag" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="containerFire">
+          <div id="fire" class="fireUtil">
+            <div id="f0" class="flame fireUtil"></div>
+          </div>
+        </div>
+        <div class="container-outlet" db="Toma Electrica" dbp="right" >
+          <img src="img/toma.png"  id="img-toma" class="outlet"  />
+          <div class="smokeElement">
+            <span class="s0"></span>
+            <span class="s1"></span>
+            <span class="s2"></span>
+            <span class="s3"></span>
+            <span class="s4"></span>
+            <span class="s5"></span>
+            <span class="s6"></span>
+            <span class="s7"></span>
+            <span class="s8"></span>
+            <span class="s9"></span>
+            <span class="s10"></span>
+            <span class="s11"></span>
+            <span class="s12"></span>
+            <span class="s13"></span>
+            <span class="s14"></span>
+            <span class="s15"></span>
+            <span class="s16"></span>
+            <span class="s17"></span>
+            <span class="s18"></span>
+            <span class="s19"></span>
+          </div>
+        </div>
+        <div class="container-cigar" db="Cigarrillo" dbp="up">
+          <img src="img/cigar.png" id="img-cigar" class="cigar"/>
+          <div class="smokeElement"  style="bottom: 12px !important;left: 10% !important;" >
+            <span class="s0"></span>
+            <span class="s1"></span>
+            <span class="s2"></span>
+            <span class="s3"></span>
+            <span class="s4"></span>
+            <span class="s5"></span>
+            <span class="s6"></span>
+            <span class="s7"></span>
+            <span class="s8"></span>
+            <span class="s9"></span>
+            <span class="s10"></span>
+            <span class="s11"></span>
+            <span class="s12"></span>
+            <span class="s13"></span>
+            <span class="s14"></span>
+            <span class="s15"></span>
+            <span class="s16"></span>
+            <span class="s17"></span>
+            <span class="s18"></span>
+            <span class="s19"></span>
+          </div>
+        </div>
+        <div class="container-painting" db="Pintura" dbp="left">
+          <img src="img/photo_frame.png" class="painting"/>
+        </div>
+        <div class="container-table" db="Mesa de madera" dbp="up">
+          <img src="img/table_night.png" class="table"/>
+        </div>
+        <div class="container-vela" db="Vela" dbp="left">
+          <div class="smokeElement">
+            <span class="s0"></span>
+            <span class="s1"></span>
+            <span class="s2"></span>
+            <span class="s3"></span>
+            <span class="s4"></span>
+            <span class="s5"></span>
+            <span class="s6"></span>
+            <span class="s7"></span>
+            <span class="s8"></span>
+            <span class="s9"></span>
+            <span class="s10"></span>
+            <span class="s11"></span>
+            <span class="s12"></span>
+            <span class="s13"></span>
+            <span class="s14"></span>
+            <span class="s15"></span>
+            <span class="s16"></span>
+            <span class="s17"></span>
+            <span class="s18"></span>
+            <span class="s19"></span>
+          </div>
+          <img src="img/vela.png" id="img-vela" class="vela"/>
+        </div>
+        <div class="container-coach" db="Sofa" dbp="up">
+          <img src="img/sofa.png" class="coach"/>
+        </div>
+      </div>
+    </div>
+    <!-- Modals -->
+    <div class="ui modal" id="modalSensor">
+      <i class="close icon"></i>
+      <div class="header">
+        Raspberry Pi
+      </div>
+      <div class="image content">
+        <div class="ui large image" class="container-raspberry">
+          <img src="img/raspberry2.png" usemap="#planetmap" id="raspberry">
+        </div>
+        <div class="description ">
+          <div class="ui header">Descripción</div>
+          <p> Raspberry Pi es un ordenador de placa reducida, ordenador </p>
+          <p> de placa única u ordenador de placa simple (SBC) de bajo coste </p>
+          <p> desarrollado en el Reino Unido por la Raspberry Pi Foundation </p>
+          <br>
+          <p> <b> Imágen tomada de : </b> (Raspberry Pi Foundation, 2018b) </p>
+        </div>
+      </div>
+    </div>
+    <div class="ui basic modal" id="modalCharts">
+      <div class="ui icon header">
+        <i class="archive icon"></i>
+        Archive Old Messages
+      </div>
+      <div class="content">
+        <p>Your inbox is getting full, would you like us to enable automatic archiving of old messages?</p>
+      </div>
+      <div class="actions">
+        <div class="ui red basic cancel inverted button">
+          <i class="remove icon"></i>
+          No
+        </div>
+        <div class="ui green ok inverted button">
+          <i class="checkmark icon"></i>
+          Yes
+        </div>
+      </div>
+    </div>
+    <script src="script/fire.js"></script>
     <script src="script/index.js"></script>
   </body>
 </html>

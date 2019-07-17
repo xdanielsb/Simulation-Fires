@@ -31,7 +31,10 @@ $(document).ready(function () {
     }
   });
   $('.thermostat').click(function(){
-    $('.ui.modal').modal('show');
+    $('#modalSensor').modal('show');
+  })
+  $('#iniciarGraficasSimulacion').click(function(){
+    $('#modalCharts').modal('show');
   })
   $('#iniciarSimulacion').click(function(){
     $(".smokeElement").addClass("smoke");
