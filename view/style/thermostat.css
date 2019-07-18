@@ -4,7 +4,10 @@
 }
 .thermostat{
   height: 80px;
-  background-color: white;
+  background-image: url(../img/raspberry.png);
+  background-size: cover;
+     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
   width: 100px;
   margin-top:2em;
   margin-left: 3em;
@@ -16,8 +19,8 @@
 .up-thermo{
   background-color: white;
 }
-.med-thermo{
-
+.med-thermo, .celcius-temp{
+	color: white;
 }
 .down-thermo{
   background-color: white;
