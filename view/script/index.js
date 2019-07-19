@@ -43,6 +43,7 @@ $(document).ready(function () {
     $('#iniciarSimulacion').hide();
     $('#detenerSimulacion').show();
     $('#iniciarGraficasSimulacion').show();
+    $("#wifi").addClass("animate");
     setTimeout( function(){
       $(".content-body").addClass("fog");
       $('.fog__container').show();
@@ -60,6 +61,7 @@ $(document).ready(function () {
     $('#detenerSimulacion').hide();
     $('#iniciarSimulacion').show();
     $("#isOk").removeClass("animate");
+    $("#wifi").removeClass("animate");
     $("#isSmoke").removeClass("animate");
     $("#isFire").removeClass("animate");
     $(".smokeElement").removeClass("smoke");
