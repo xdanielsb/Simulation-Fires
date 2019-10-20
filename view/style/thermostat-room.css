@@ -1,0 +1,103 @@
+.content-sim{
+  margin:1em;
+  display: inline-block;
+}
+.thermostat{
+  height: 80px;
+  background-image: url(../img/raspberry-gray.png);
+  background-size: cover;
+  width: 100px;
+  margin-top:2em;
+  margin-left: 3em;
+  position: relative;
+  padding-top: 1em;
+  border-radius: 20%;
+  z-index: 3;
+}
+.up-thermo{
+  background-color: white;
+}
+.med-thermo, .celcius-temp{
+	color: white;
+}
+.down-thermo{
+  background-color: transparent;
+}
+.dots{
+  text-align: center;
+  letter-spacing: 0.5em;
+}
+.wifi{
+  margin-top:0.5em;
+  margin-right: 1em;
+  float: right;
+  color: cornflowerblue;
+}
+.links{
+  position: absolute;
+  bottom: 0;
+  left:0;
+}
+
+.container-raspberry .coach, .outlet, .painting, .cigar, .table, .vela{
+  /* position: absolute; */
+  /* display: block; */
+}
+.container-coach, .container-outlet, .container-painting, .container-cigar, .container-table, .container-vela{
+  position: absolute;
+  display: block;
+}
+.coach{
+  width: 25em;
+  height: 15em;
+}
+.outlet{
+  width: 3em;
+  height: 2em;
+}
+.painting{
+  width: 8em;
+  height: 10em;
+}
+.container-cigar{
+  z-index: 4;
+}
+.cigar{
+  width: 3em;
+  height:1em;
+}
+.table{
+  width: 9em;
+  height: 10em;
+}
+.vela{
+  width: 1.5em;
+  height: 2.5em;
+}
+
+
+.container-coach{
+  margin-left: 18em;
+  margin-top: 22em;
+}
+.container-outlet{
+  margin-top: 26em;
+  margin-left: 17em;
+
+}
+.container-painting{
+  margin-left: 40em;
+  margin-top: 6em;
+}
+.container-cigar{
+  margin-top: 30em;
+  margin-left: 21em;
+}
+.container-table{
+  margin-top: 24em;
+    margin-left: 43em;
+}
+.container-vela{
+  margin-top: 23em;
+  margin-left: 45em;
+}

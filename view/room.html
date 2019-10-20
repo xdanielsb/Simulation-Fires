@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="style/index.css">
+    <link rel="stylesheet" type="text/css" href="style/sala.css">
+    <link rel="stylesheet" type="text/css" href="style/balloon.css">
+    <link rel="stylesheet" type="text/css" href="style/thermostat-room.css">
+    <link rel="stylesheet" type="text/css" href="style/smoke.css">
+    <link rel="stylesheet" type="text/css" href="style/flame.css">
+    <link rel="stylesheet" type="text/css" href="style/fog.css">
+    <link rel="stylesheet" type="text/css" href="style/termometer.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <script src="script/apexcharts.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  </head>
+  <body>
+    <div class="ui bottom attached segment pushable">
+    <div class="ui visible  left vertical sidebar menu">
+      <img class="ui centered small image" src="img/avatar-other.jpg" id="avatar"/>
+      <h4 class="ui  center aligned grey header" > Daniel Santos </h4>
+      <div class="content-menu">
+        <h4> Entornos </h4>
+          <div>
+            <div>
+              <a href="./living.html" > Sala </a><br>
+              <a href="./kitchen.html" > Cocina </a><br>
+
+                <a href="./room.html" > Cuarto </a>
+            </div>
+          </div>
+        <h5 > Causas de incendio </h5>
+        <div>
+          <div class="ui toggle checkbox">
+            <input type="checkbox" name="public" id="chkCigar" checked >
+            <label>Cigarrillo</label>
+          </div>
+          <div class="ui toggle checkbox">
+            <input type="checkbox" name="public" id="chkOutlet" checked>
+            <label>Toma Electrica</label>
+          </div>
+          <div class="ui toggle checkbox">
+            <input type="checkbox" name="public" id="chkVela" checked>
+            <label>Vela</label>
+          </div>
+        </div>
+        <div class="btnInit">
+          <div db="Iniciar Simulación" dbp="up">
+            <i class="fas fa-play"  id="iniciarSimulacion" ></i>
+          </div>
+        </div>
+        <div class="btnStop">
+          <div db="Detener Simulación" dbp="up">
+            <i class="fas fa-stop"  id="detenerSimulacion" ></i>
+          </div>
+        </div>
+        <div class="btnCharts">
+          <div db="Estadísticas Simulación" dbp="up">
+            <i class="fas fa-chart-pie"  id="iniciarGraficasSimulacion" ></i>
+          </div>
+        </div>
+      </div>
+     <!-- <div class="links">
+        <a class="item" >
+        Acerca del proyecto
+        </a>
+        <a class="item">
+        Obtener más información
+        </a>
+     </div>-->
+    </div>
+    <div class="pusher content-body " style="background-image: url('../img/wall_floor_room.jpg') !important; background-repeat: no-repeat;  background-size: 80em 50em; ">
+      <figure class="absolute-bg" ></figure>
+      <div class="fog__container">
+        <div class="fog__img fog__img--first"></div>
+        <div class="fog__img fog__img--second"></div>
+      </div>
+      <div class="content-sim">
+        <div class="thermostat" db="Ensamblaje Físico" dbp="right" >
+          <div class="up-thermo">
+            <i class="fa fa-wifi wifi" aria-hidden="true" id="wifi"></i>
+          </div>
+          <div class="med-thermo">
+            <h1 class="ui  center aligned  header celcius-temp" > 17&deg;C </h1>
+          </div>
+          <div class="down-thermo">
+            <div class="dots">
+              <i id="isOk" class="fa fa-circle dotFlag "  aria-hidden="true"></i>
+              <i id="isSmoke" class="fa fa-circle dotFlag" aria-hidden="true"></i>
+              <i id="isFire" class="fa fa-circle dotFlag" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="containerFire">
+          <div id="fire" class="fireUtil">
+            <div id="f0" class="flame fireUtil"></div>
+          </div>
+        </div>
+        <div class="container-outlet" db="Toma Electrica" dbp="right" >
+          <img src="img/toma.png"  id="img-toma" class="outlet"  />
+          <div class="smokeElement">
+            <span class="s0"></span>
+            <span class="s1"></span>
+            <span class="s2"></span>
+            <span class="s3"></span>
+            <span class="s4"></span>
+            <span class="s5"></span>
+            <span class="s6"></span>
+            <span class="s7"></span>
+            <span class="s8"></span>
+            <span class="s9"></span>
+            <span class="s10"></span>
+            <span class="s11"></span>
+            <span class="s12"></span>
+            <span class="s13"></span>
+            <span class="s14"></span>
+            <span class="s15"></span>
+            <span class="s16"></span>
+            <span class="s17"></span>
+            <span class="s18"></span>
+            <span class="s19"></span>
+          </div>
+        </div>
+        <div class="container-cigar" db="Cigarrillo" dbp="up">
+          <img src="img/cigar.png" id="img-cigar" class="cigar"/>
+          <div class="smokeElement"  style="bottom: 12px !important;left: 10% !important;" >
+            <span class="s0"></span>
+            <span class="s1"></span>
+            <span class="s2"></span>
+            <span class="s3"></span>
+            <span class="s4"></span>
+            <span class="s5"></span>
+            <span class="s6"></span>
+            <span class="s7"></span>
+            <span class="s8"></span>
+            <span class="s9"></span>
+            <span class="s10"></span>
+            <span class="s11"></span>
+            <span class="s12"></span>
+            <span class="s13"></span>
+            <span class="s14"></span>
+            <span class="s15"></span>
+            <span class="s16"></span>
+            <span class="s17"></span>
+            <span class="s18"></span>
+            <span class="s19"></span>
+          </div>
+        </div>
+        <div class="container-painting" db="Pintura" dbp="left">
+          <img src="img/painting2.jpg" class="painting"/>
+        </div>
+        <div class="container-table" db="Mesa de madera" dbp="up">
+          <img src="img/table_night.png" class="table"/>
+        </div>
+        <div class="container-vela" db="Vela" dbp="left">
+          <div class="smokeElement">
+            <span class="s0"></span>
+            <span class="s1"></span>
+            <span class="s2"></span>
+            <span class="s3"></span>
+            <span class="s4"></span>
+            <span class="s5"></span>
+            <span class="s6"></span>
+            <span class="s7"></span>
+            <span class="s8"></span>
+            <span class="s9"></span>
+            <span class="s10"></span>
+            <span class="s11"></span>
+            <span class="s12"></span>
+            <span class="s13"></span>
+            <span class="s14"></span>
+            <span class="s15"></span>
+            <span class="s16"></span>
+            <span class="s17"></span>
+            <span class="s18"></span>
+            <span class="s19"></span>
+          </div>
+          <img src="img/vela.png" id="img-vela" class="vela"/>
+        </div>
+        <div class="container-coach" db="Sofa" dbp="up">
+          <img src="img/bed.png" class="coach"/>
+        </div>
+      </div>
+    </div>
+    <!-- Modals -->
+    <div class="ui modal" id="modalSensor">
+      <i class="close icon"></i>
+      <div class="header">
+        Modelo de Ensamblaje Físico Propuesto 
+      </div>
+      <div class="image content">
+        <div class="ui large image" class="container-raspberry">
+          <img src="img/escenarios_monitoreo.png" usemap="#planetmap" id="raspberry">
+        </div>
+        <div class="description ">
+          <div class="ui header">Componentes dispositivo</div>
+          <p> Raspberry Pi 3 Modelo B</p>
+          <p> Pi 3 click shield</p>
+          <p> Air quality click</p>
+          <p> DTH11</p>
+          <p> Restincia</p>
+          <p> Cable puente para prototipos</p>
+          <p> Placa de Inserción</p>
+          <br>
+          <p> <b> Imágen tomada de : </b> Riaño-Vargas et al., 2019, p. 915 </p>
+        </div>
+      </div>
+    </div>
+    <div class="ui  modal " id="modalCharts">
+      <div class="ui icon header">
+        <!-- <i class="archive icon"></i> -->
+        Estadísticas de la Simulación
+      </div>
+      <div class="content">
+        <div class="charts">
+          <div class="chartTemperatura">
+            <div id="chartT"></div>
+          </div>
+          <div class="chartHumo">
+            <div id="chartH"></div>
+          </div>
+        </div>
+        <div class="info">
+          <div class="stats">
+            <div id="wrapper">
+            	<div id="termometer">
+            		<div id="temperature" style="height:20px" data-value="17°C"></div>
+            		<div id="graduations"></div>
+            	</div>
+            </div>
+
+          </div>
+          <div class="state">
+            <h1>Inminente Incendio</h1>
+          </div>
+        </div>
+      </div>
+      <div class="actions">
+        <div class="ui green ok inverted button">
+          <i class="remove icon"></i>
+
+        </div>
+      </div>
+    </div>
+    <script src="script/fire.js"></script>
+    <script src="script/index.js"></script>
+  <script src="script/chartTemp.js"></script>
+  </body>
+</html>

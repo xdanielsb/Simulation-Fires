@@ -1,0 +1,63 @@
+
+.container-raspberry .coach, .outlet, .painting, .cigar, .table, .vela{
+  /* position: absolute; */
+  /* display: block; */
+}
+.container-coach, .container-outlet, .container-painting, .container-cigar, .container-table, .container-vela{
+  position: absolute;
+  display: block;
+}
+.coach{
+  width: 30em;
+  height: 15em;
+}
+.outlet{
+  width: 5em;
+  height: 3em;
+}
+.painting{
+  width: 8em;
+  height: 10em;
+}
+.container-cigar{
+  z-index: 4;
+}
+.cigar{
+  width: 3em;
+  height:1em;
+}
+.table{
+  width: 9em;
+  height: 10em;
+}
+.vela{
+  width: 1.5em;
+  height: 2.5em;
+}
+
+
+.container-coach{
+  margin-left: 18em;
+  margin-top: 16em;
+}
+.container-outlet{
+  margin-top: 14em;
+  margin-left: 3em;
+
+}
+.container-painting{
+  margin-left: 61em;
+  margin-top: 2em;
+}
+.container-cigar{
+  margin-top: 30em;
+  margin-left: 21em;
+}
+.container-table{
+  margin-top: 20em;
+  margin-left: 60em;
+}
+.container-vela{
+  margin-top: 19em;
+  margin-left: 62em;
+}

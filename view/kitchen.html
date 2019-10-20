@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <link rel="stylesheet" type="text/css" href="style/index.css">
     <link rel="stylesheet" type="text/css" href="style/balloon.css">
-    <link rel="stylesheet" type="text/css" href="style/thermostat.css">
+    <link rel="stylesheet" type="text/css" href="style/thermostat-kitchen.css">
     <link rel="stylesheet" type="text/css" href="style/smoke.css">
     <link rel="stylesheet" type="text/css" href="style/flame.css">
     <link rel="stylesheet" type="text/css" href="style/fog.css">
@@ -21,27 +21,35 @@
   <body>
     <div class="ui bottom attached segment pushable">
     <div class="ui visible  left vertical sidebar menu">
-      <img class="ui centered small image" src="img/avatar.png" id="avatar"/>
+      <img class="ui centered small image" src="img/avatar-chef.png" id="avatar"/>
       <h4 class="ui  center aligned grey header" > Daniel Santos </h4>
       <div class="content-menu">
-        <!-- <h4> Parametros </h4>
+        <h4> Entornos </h4>
           <div>
             <div>
-              <h5> Velocidad de propagación </h5>
-              <input  type="range" name="points" min="0" max="10"/>
+              <a href="./living.html" > Sala </a><br>
+              <a href="./kitchen.html" > Cocina </a><br>
+                <a href="./room.html" > Cuarto </a>
             </div>
           </div>
-          -->
+        
+
+
         <h5 > Causas de incendio </h5>
         <div>
+
           <div class="ui toggle checkbox">
-            <input type="checkbox" name="public" id="chkCigar" checked >
-            <label>Cigarrillo</label>
+            <input type="checkbox" name="public" id="chkOven" checked >
+            <label>Estufa</label>
           </div>
           <div class="ui toggle checkbox">
             <input type="checkbox" name="public" id="chkOutlet" checked>
             <label>Toma Electrica</label>
           </div>
+          <div class="ui toggle checkbox">
+            <input type="checkbox" name="public" id="chkCigar" checked>
+            <label>Cigarrillo</label>
+          </div><br>
           <div class="ui toggle checkbox">
             <input type="checkbox" name="public" id="chkVela" checked>
             <label>Vela</label>
@@ -63,16 +71,16 @@
           </div>
         </div>
       </div>
-      <div class="links">
+      <!--<div class="links">
         <a class="item" >
         Acerca del proyecto
         </a>
         <a class="item">
         Obtener más información
         </a>
-      </div>
+      </div>-->
     </div>
-    <div class="pusher content-body ">
+    <div class="pusher content-body " style="background-image: url('../img/wall_floor_02.jpg') !important; background-size: contain; ">
       <figure class="absolute-bg" ></figure>
       <div class="fog__container">
         <div class="fog__img fog__img--first"></div>
@@ -99,9 +107,9 @@
             <div id="f0" class="flame fireUtil"></div>
           </div>
         </div>
-        <div class="container-outlet" db="Toma Electrica" dbp="right" >
-          <img src="img/toma.png"  id="img-toma" class="outlet"  />
-          <div class="smokeElement">
+        <div class="container-oven" db="Horno" dbp="right" >
+          <img src="img/oven2.png"  id="img-oven" class="oven"  />
+          <div class="smokeElement" style="margin-bottom:15em; margin-left: 3em;">
             <span class="s0"></span>
             <span class="s1"></span>
             <span class="s2"></span>
@@ -123,6 +131,7 @@
             <span class="s18"></span>
             <span class="s19"></span>
           </div>
+
         </div>
         <div class="container-cigar" db="Cigarrillo" dbp="up">
           <img src="img/cigar.png" id="img-cigar" class="cigar"/>
@@ -149,12 +158,32 @@
             <span class="s19"></span>
           </div>
         </div>
-        <div class="container-painting" db="Pintura" dbp="left">
-          <img src="img/photo_frame.png" class="painting"/>
+        <div class="container-outlet" db="Outlet" dbp="left">
+          <img src="img/toma.png" class="outlet"/>
+<div class="smokeElement"  style="bottom: 12px !important;left: 10% !important;" >
+            <span class="s0"></span>
+            <span class="s1"></span>
+            <span class="s2"></span>
+            <span class="s3"></span>
+            <span class="s4"></span>
+            <span class="s5"></span>
+            <span class="s6"></span>
+            <span class="s7"></span>
+            <span class="s8"></span>
+            <span class="s9"></span>
+            <span class="s10"></span>
+            <span class="s11"></span>
+            <span class="s12"></span>
+            <span class="s13"></span>
+            <span class="s14"></span>
+            <span class="s15"></span>
+            <span class="s16"></span>
+            <span class="s17"></span>
+            <span class="s18"></span>
+            <span class="s19"></span>
+          </div>
         </div>
-        <div class="container-table" db="Mesa de madera" dbp="up">
-          <img src="img/table_night.png" class="table"/>
-        </div>
+
         <div class="container-vela" db="Vela" dbp="left">
           <div class="smokeElement">
             <span class="s0"></span>
@@ -180,8 +209,12 @@
           </div>
           <img src="img/vela.png" id="img-vela" class="vela"/>
         </div>
-        <div class="container-coach" db="Sofa" dbp="up">
-          <img src="img/sofa.png" class="coach"/>
+
+        <div class="container-frigo" db="Sofa" dbp="up">
+          <img src="img/frigo.png" class="frigo"/>
+        </div>
+        <div class="container-drawer" db="drawer" dbp="up">
+          <img src="img/drawerkitchen.png" class="drawer"/>
         </div>
       </div>
     </div>
